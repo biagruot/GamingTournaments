@@ -58,14 +58,14 @@ export const TournamentCard: React.FC<ITournamentcardProps> = ({
   };
 
   return (
-    <Card>
+    <Card data-testid="tournament-card">
       <H6>{tournament.name}</H6>
       <ul>
         <li>Organizer: {tournament.organizer}</li>
         <li>Game: {tournament.game}</li>
         <li>
           Participants: {tournament.participants.current}/
-          {tournament.participants.current}
+          {tournament.participants.max}
         </li>
         <li>Date: {formatDate(tournament.startDate)}</li>
       </ul>

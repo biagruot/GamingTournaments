@@ -14,13 +14,13 @@ import {
 } from '../actions/action.types';
 import { ITournamentsState, UIStatus } from '../models';
 
-const initialState = {
+export const initialState = {
   items: [],
   uiStatus: UIStatus.IDLE,
 };
 
 export const tournaments: Reducer<ITournamentsState> = (
-  state = initialState,
+  state: ITournamentsState = initialState,
   action
 ) => {
   switch (action.type) {
